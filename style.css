@@ -417,77 +417,80 @@ button:active{transform:translateY(0)}
 }
 
 /* ============================
-   MODO MÓVIL — FIX HEADER
+   MODO MÓVIL 
    ============================ */
 @media (max-width: 600px){
 
+  /* Header más compacto */
   .toolbar{
     flex-wrap: wrap;
     padding: .4rem .6rem;
-    gap: .5rem;
+    gap: .4rem;
   }
 
   .toolbar h1{
     flex-basis: 100%;
     font-size: .95rem;
-    margin:0;
+    margin: 0;
   }
 
   .toolbar button{
-    padding: .45rem .7rem;
-    font-size: .75rem;
+    padding: .4rem .6rem;
+    font-size: .78rem;
     border-radius: .6rem;
   }
 
-  #download{
-    order: 1;
-  }
-
-  #dark-mode-toggle{
-    order: 2;
-  }
-
+  /* Footer chiquito debajo del título */
   .toolbar .footer{
     flex-basis: 100%;
     text-align: left;
     font-size: .65rem;
     opacity: .6;
-    margin-top: -4px;
+    margin-top: -2px;
   }
-}
 
-@media (max-width: 600px){
+  /* Tablero ocupa el ancho del móvil */
+  .board{
+    padding: 1rem;
+  }
+
   .canvas{
     width: 100% !important;
     min-width: 100% !important;
     border-radius: 16px;
   }
 
-  .board{
-    padding: 1rem;
+  /* Notas un poco más angostas */
+  .note{
+    width: min(220px, 80vw);
+    min-height: 150px;
   }
-}
 
-@media (max-width: 600px){
+  /* Dock más discreto */
+  .dock{
+    padding: .3rem 0 .6rem;
+  }
 
   .dock-inner{
     gap: .7rem;
-    padding-bottom: .2rem;
   }
 
   .dock-btn{
-    padding: .55rem .6rem;
+    padding: .55rem .65rem;
     border-radius: 12px;
-  }
-
-  .dock-icon{
-    font-size: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,.18);
   }
 
   .dock-btn-main{
-    padding: .7rem 1rem;
+    padding: .65rem .9rem;
+  }
+
+  .dock-icon{
+    font-size: 1.6rem;
   }
 }
+
+
 
 
 
