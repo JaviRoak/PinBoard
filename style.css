@@ -454,10 +454,11 @@ button:active{transform:translateY(0)}
     padding: 1rem;
   }
 
-  .canvas{
-    width: 100% !important;
-    min-width: 100% !important;
-    border-radius: 16px;
+  .note{
+    width: 180px;          /* más angosta */
+    min-height: 130px;     /* un poco más baja */
+    padding: 0.8rem 0.7rem 0.6rem;
+    border-radius: 10px;
   }
 
   /* Notas un poco más angostas */
@@ -489,6 +490,7 @@ button:active{transform:translateY(0)}
     font-size: 1.6rem;
   }
 }
+
 
 
 
