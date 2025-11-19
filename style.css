@@ -455,8 +455,8 @@ button:active{transform:translateY(0)}
   }
 
   .note{
-    width: 180px;          /* más angosta */
-    min-height: 130px;     /* un poco más baja */
+    width: 10px;          /* más angosta */
+    min-height: 80px;     /* un poco más baja */
     padding: 0.8rem 0.7rem 0.6rem;
     border-radius: 10px;
   }
@@ -490,6 +490,7 @@ button:active{transform:translateY(0)}
     font-size: 1.6rem;
   }
 }
+
 
 
 
