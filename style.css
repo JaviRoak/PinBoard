@@ -416,4 +416,78 @@ button:active{transform:translateY(0)}
     0 2px 0 rgba(0,0,0,.25);
 }
 
+/* ============================
+   MODO MÓVIL — FIX HEADER
+   ============================ */
+@media (max-width: 600px){
+
+  .toolbar{
+    flex-wrap: wrap;
+    padding: .4rem .6rem;
+    gap: .5rem;
+  }
+
+  .toolbar h1{
+    flex-basis: 100%;
+    font-size: .95rem;
+    margin:0;
+  }
+
+  .toolbar button{
+    padding: .45rem .7rem;
+    font-size: .75rem;
+    border-radius: .6rem;
+  }
+
+  #download{
+    order: 1;
+  }
+
+  #dark-mode-toggle{
+    order: 2;
+  }
+
+  .toolbar .footer{
+    flex-basis: 100%;
+    text-align: left;
+    font-size: .65rem;
+    opacity: .6;
+    margin-top: -4px;
+  }
+}
+
+@media (max-width: 600px){
+  .canvas{
+    width: 100% !important;
+    min-width: 100% !important;
+    border-radius: 16px;
+  }
+
+  .board{
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 600px){
+
+  .dock-inner{
+    gap: .7rem;
+    padding-bottom: .2rem;
+  }
+
+  .dock-btn{
+    padding: .55rem .6rem;
+    border-radius: 12px;
+  }
+
+  .dock-icon{
+    font-size: 1.5rem;
+  }
+
+  .dock-btn-main{
+    padding: .7rem 1rem;
+  }
+}
+
+
 
