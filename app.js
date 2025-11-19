@@ -491,7 +491,7 @@
     loadCanvasSize();
     syncConnectLayerSize();
     syncDrawLayerSize();
-
+  
     const raw = localStorage.getItem(LS_KEY);
     if(!raw){
       const cx = Math.max(40, (canvas.clientWidth/2)-120);
@@ -510,9 +510,15 @@
         localStorage.removeItem(LS_KEY);
       }
     }
-    loadPins();   // cargar pines
-    loadLinks(); // cargar hilos después de tener las notas
+  
+    loadPins();   // pines sueltos
+    loadLinks();  // hilos
+  
+    // IMPORTANTE: después de que todo existe en el DOM,
+    // asegura que ninguna nota quede fuera del canvas.
+    setTimeout(clampNotesToCanvas, 0);
   }
+
 
   // Crea una nota en el tablero
   function spawn({id, x=50, y=50, color=1, rot='0deg', html=''}){
@@ -917,4 +923,5 @@
     saveCanvasSize();
   });
 })();
+
 
