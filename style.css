@@ -421,7 +421,6 @@ button:active{transform:translateY(0)}
    ============================ */
 @media (max-width: 600px){
 
-  /* Header más compacto */
   .toolbar{
     flex-wrap: wrap;
     padding: .4rem .6rem;
@@ -440,7 +439,6 @@ button:active{transform:translateY(0)}
     border-radius: .6rem;
   }
 
-  /* Footer chiquito debajo del título */
   .toolbar .footer{
     flex-basis: 100%;
     text-align: left;
@@ -449,25 +447,33 @@ button:active{transform:translateY(0)}
     margin-top: -2px;
   }
 
-  /* Tablero ocupa el ancho del móvil */
   .board{
     padding: 1rem;
   }
 
-  .note{
-    width: 10px;          /* más angosta */
-    min-height: 80px;     /* un poco más baja */
-    padding: 0.8rem 0.7rem 0.6rem;
-    border-radius: 10px;
-  }
-
-  /* Notas un poco más angostas */
+  /* ✔ TAMAÑO REAL DE NOTAS EN MÓVIL */
   .note{
     width: min(220px, 80vw);
     min-height: 150px;
+    padding: 0.7rem 0.7rem 0.5rem;
+    border-radius: 10px;
   }
 
-  /* Dock más discreto */
+  .note .body{
+    font-size: 14px;
+  }
+
+  .note .pin{
+    width: 14px;
+    height: 14px;
+    top: 6px;
+  }
+
+  .note .head .delete{
+    font-size: .75rem;
+    padding: .2rem .45rem;
+  }
+
   .dock{
     padding: .3rem 0 .6rem;
   }
@@ -490,6 +496,8 @@ button:active{transform:translateY(0)}
     font-size: 1.6rem;
   }
 }
+
+
 
 
 
