@@ -76,8 +76,19 @@
         localStorage.removeItem(SIZE_KEY);
       }
     }
+  
     // tamaño por defecto
-    applyCanvasSize(1200, 700);
+    const isMobile = window.innerWidth <= 600;
+  
+    if (isMobile) {
+      // un poco menos que el ancho total por el padding de .board
+      const w = Math.max(360, window.innerWidth - 32);
+      // alto pensado para que no se coma TODA la pantalla
+      const h = Math.max(420, window.innerHeight - 260);
+      applyCanvasSize(w, h);
+    } else {
+      applyCanvasSize(1200, 700);
+    }
   }
 
   // Guarda el tamaño actual del tablero
@@ -906,3 +917,4 @@
     saveCanvasSize();
   });
 })();
+
